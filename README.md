@@ -1,15 +1,19 @@
 ```swift
-struct Info {
-    let name: String = "Denis Pavlov"
-    let code: [String] = ["Swift", "Java"]
-    let occupation: String = "iOS Developer"
-    let wantsToLearn: String = "Idris"
+enum Info: String {
+    case name = "Denis Pavlov"
+    case primaryLanguage = "Swift"
+    case occupation = "iOS Developer"
+    case wantsToLearn = "Idris"
+    
+    var languageExperienced: [String] {
+        ["Java", "Shell", "JavaScript", "PHP", "Prolog", "x86 assembly", "C/C++", "C#", "SQL", "Pascal"]
+    }
 }
 
-struct Social {
-    let telegram: String = "kurumoch"
-    let linkedin: String = "kurumoch"
-    let habrCareer: String = "kurumoch"
-    let spotify: String = "kurumoch"
+enum Social: String {
+    case telegram = "kurumoch"
+    case linkedIn = "kurumoch"
+    case habrCareer = "kurumoch"
+    case spotify = "kurumoch"
 }
 ```
